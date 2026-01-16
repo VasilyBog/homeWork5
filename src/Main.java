@@ -32,10 +32,10 @@ public class Main {
         boolean each400Year = year % 400 == 0;
         boolean each100Year = year % 100 != 0;
         boolean each4Year = year % 4 == 0;
-        if ((!startYear && each4Year && each100Year) || each400Year) {
-            System.out.println(year + " год является високосным");
-        } else if (startYear) {
+        if (startYear) {
             System.out.println("В " + year + " году високосный год ещё не ввели");
+        } else if ((each4Year && each100Year) || each400Year) {
+            System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
         }
